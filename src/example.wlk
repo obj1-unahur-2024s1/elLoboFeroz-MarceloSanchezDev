@@ -24,6 +24,9 @@ object loboFeroz {
 		self.bajarPeso(1)
 		return peso
 	}
+	method soplarCasa(tipoCasa, cantOcupantes){
+		return self.bajarPeso(tipoCasa.resistencia(cantOcupantes) + cantOcupantes)
+	}
 }
 
 /*Caperucita Roja */
@@ -61,8 +64,34 @@ object hamburgesa {
 }
 
 object manzana {
+
 	method peso(){
 		return 0.2
 	}
 }
+
 /*chanchitos */
+object chanchito{
+	method peso(){
+		return 60
+	}
+}
+/*casa chanchitos */
+object casaDePaja{
+	method resistencia(){
+		return 0
+	}
+}
+object casaDeMadera{
+	method resistencia(){
+		return 5
+	}
+}
+
+object casaDeLadrillo{
+	method resistnecia(cantDeLadrillos){
+		return cantDeLadrillos * 2
+	}
+}
+
+
